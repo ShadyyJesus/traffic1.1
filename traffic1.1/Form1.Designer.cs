@@ -415,6 +415,8 @@
             this.BlueCarRight2 = new System.Windows.Forms.PictureBox();
             this.BlueCarRight4 = new System.Windows.Forms.PictureBox();
             this.timer12 = new System.Windows.Forms.Timer(this.components);
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Pricepa1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RedCarRight3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RedCarRight2)).BeginInit();
@@ -794,6 +796,7 @@
             this.Pause.TabIndex = 190;
             this.Pause.Text = "Пауза";
             this.Pause.UseVisualStyleBackColor = true;
+            this.Pause.Click += new System.EventHandler(this.Pause_Click);
             // 
             // Stop
             // 
@@ -803,6 +806,7 @@
             this.Stop.TabIndex = 191;
             this.Stop.Text = "Стоп";
             this.Stop.UseVisualStyleBackColor = true;
+            this.Stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // Begin
             // 
@@ -812,6 +816,7 @@
             this.Begin.TabIndex = 192;
             this.Begin.Text = "Запуск обучения";
             this.Begin.UseVisualStyleBackColor = true;
+            this.Begin.Click += new System.EventHandler(this.Begin_Click);
             // 
             // End
             // 
@@ -821,6 +826,7 @@
             this.End.TabIndex = 193;
             this.End.Text = "Остановка обучения";
             this.End.UseVisualStyleBackColor = true;
+            this.End.Click += new System.EventHandler(this.End_Click);
             // 
             // Test
             // 
@@ -839,50 +845,55 @@
             // 
             // Perehod
             // 
-            this.Perehod.Location = new System.Drawing.Point(823, 548);
+            this.Perehod.Location = new System.Drawing.Point(823, 536);
             this.Perehod.Name = "Perehod";
             this.Perehod.Size = new System.Drawing.Size(75, 23);
             this.Perehod.TabIndex = 269;
             this.Perehod.Text = "Переход";
             this.Perehod.UseVisualStyleBackColor = true;
+            this.Perehod.Visible = false;
             this.Perehod.Click += new System.EventHandler(this.Perehod_Click);
             // 
             // Dvijenie
             // 
-            this.Dvijenie.Location = new System.Drawing.Point(823, 506);
+            this.Dvijenie.Location = new System.Drawing.Point(823, 494);
             this.Dvijenie.Name = "Dvijenie";
             this.Dvijenie.Size = new System.Drawing.Size(75, 23);
             this.Dvijenie.TabIndex = 268;
             this.Dvijenie.Text = "Движение";
             this.Dvijenie.UseVisualStyleBackColor = true;
+            this.Dvijenie.Visible = false;
             // 
             // Svetofor
             // 
-            this.Svetofor.Location = new System.Drawing.Point(823, 467);
+            this.Svetofor.Location = new System.Drawing.Point(823, 455);
             this.Svetofor.Name = "Svetofor";
             this.Svetofor.Size = new System.Drawing.Size(75, 23);
             this.Svetofor.TabIndex = 267;
             this.Svetofor.Text = "Светофор";
             this.Svetofor.UseVisualStyleBackColor = true;
+            this.Svetofor.Visible = false;
             this.Svetofor.Click += new System.EventHandler(this.Svetofor_Click);
             // 
             // Peshehod
             // 
-            this.Peshehod.Location = new System.Drawing.Point(823, 428);
+            this.Peshehod.Location = new System.Drawing.Point(823, 416);
             this.Peshehod.Name = "Peshehod";
             this.Peshehod.Size = new System.Drawing.Size(75, 23);
             this.Peshehod.TabIndex = 266;
             this.Peshehod.Text = "Пешеход";
             this.Peshehod.UseVisualStyleBackColor = true;
+            this.Peshehod.Visible = false;
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(823, 584);
+            this.Delete.Location = new System.Drawing.Point(823, 572);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
             this.Delete.TabIndex = 391;
             this.Delete.Text = "Удалить";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Visible = false;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // timer2
@@ -2535,44 +2546,48 @@
             this.pictureBox253.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox253.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox253.BackgroundImage")));
             this.pictureBox253.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox253.Location = new System.Drawing.Point(784, 418);
+            this.pictureBox253.Location = new System.Drawing.Point(784, 406);
             this.pictureBox253.Name = "pictureBox253";
             this.pictureBox253.Size = new System.Drawing.Size(33, 33);
             this.pictureBox253.TabIndex = 265;
             this.pictureBox253.TabStop = false;
+            this.pictureBox253.Visible = false;
             // 
             // pictureBox250
             // 
             this.pictureBox250.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox250.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox250.BackgroundImage")));
             this.pictureBox250.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox250.Location = new System.Drawing.Point(784, 535);
+            this.pictureBox250.Location = new System.Drawing.Point(784, 523);
             this.pictureBox250.Name = "pictureBox250";
             this.pictureBox250.Size = new System.Drawing.Size(33, 33);
             this.pictureBox250.TabIndex = 264;
             this.pictureBox250.TabStop = false;
+            this.pictureBox250.Visible = false;
             // 
             // pictureBox211
             // 
             this.pictureBox211.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox211.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox211.BackgroundImage")));
             this.pictureBox211.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox211.Location = new System.Drawing.Point(784, 457);
+            this.pictureBox211.Location = new System.Drawing.Point(784, 445);
             this.pictureBox211.Name = "pictureBox211";
             this.pictureBox211.Size = new System.Drawing.Size(33, 33);
             this.pictureBox211.TabIndex = 263;
             this.pictureBox211.TabStop = false;
+            this.pictureBox211.Visible = false;
             // 
             // pictureBox188
             // 
             this.pictureBox188.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox188.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox188.BackgroundImage")));
             this.pictureBox188.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox188.Location = new System.Drawing.Point(784, 496);
+            this.pictureBox188.Location = new System.Drawing.Point(784, 484);
             this.pictureBox188.Name = "pictureBox188";
             this.pictureBox188.Size = new System.Drawing.Size(33, 33);
             this.pictureBox188.TabIndex = 262;
             this.pictureBox188.TabStop = false;
+            this.pictureBox188.Visible = false;
             // 
             // Perehod13
             // 
@@ -4460,11 +4475,34 @@
             // 
             this.timer12.Tick += new System.EventHandler(this.timer12_Tick);
             // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(775, 439);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(132, 31);
+            this.AddBtn.TabIndex = 430;
+            this.AddBtn.Text = "Добавить";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(766, 605);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(132, 31);
+            this.BackBtn.TabIndex = 431;
+            this.BackBtn.Text = "Назад";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Visible = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 679);
+            this.Controls.Add(this.BackBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.BlueCarRight4);
             this.Controls.Add(this.BlueCarRight2);
             this.Controls.Add(this.BlueCarRight3);
@@ -5591,6 +5629,8 @@
         private System.Windows.Forms.PictureBox BlueCarRight2;
         private System.Windows.Forms.PictureBox BlueCarRight4;
         private System.Windows.Forms.Timer timer12;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button BackBtn;
     }
 }
 

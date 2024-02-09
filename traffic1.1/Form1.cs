@@ -16,6 +16,7 @@ namespace traffic1._1
         private int SvetoforCount = 41; 
         private PictureBox clickedPerehod;
         private PictureBox clickedSvetofor;
+        private bool isPaused = false;
 
         public Form1()
         {
@@ -614,6 +615,126 @@ namespace traffic1._1
             {
                 BlueCarRight4.Visible = false;
             }
+        }
+
+        private void Stop_Click(object sender, EventArgs e)
+        {
+            ResetCars();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            Peshehod.Visible = true;
+            Svetofor.Visible = true;
+            Dvijenie.Visible = true;
+            Perehod.Visible = true;
+            Delete.Visible = true;
+            pictureBox253.Visible = true;
+            pictureBox211.Visible = true;
+            pictureBox188.Visible = true;
+            pictureBox250.Visible = true;
+            AddBtn.Visible = false;
+            BackBtn.Visible = true;
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Peshehod.Visible = false;
+            Svetofor.Visible = false;
+            Dvijenie.Visible = false;
+            Perehod.Visible = false;
+            Delete.Visible = false;
+            pictureBox253.Visible = false;
+            pictureBox211.Visible = false;
+            pictureBox188.Visible = false;
+            pictureBox250.Visible = false;
+            AddBtn.Visible = true;
+            BackBtn.Visible = false;
+        }
+
+        private void Begin_Click(object sender, EventArgs e)
+        {
+            ResetCars();
+
+            timer1.Start();
+            RedCar.Visible = true;
+
+            timer2.Start();
+            PricepCar1.Visible = true;
+
+            timer3.Start();
+            RedCarLeft1.Visible = true;
+
+            timer4.Start();
+            GruzovikCar1.Visible = true;
+
+            timer5.Start();
+            GruzovikCarDown.Visible = true;
+
+            timer6.Start();
+            BlueCar.Visible = true;
+
+            timer7.Start();
+            carpricep1.Visible = true;
+
+            timer8.Start();
+            bluecardown1.Visible = true;
+
+            timer9.Start();
+            gruz1.Visible = true;
+
+            timer10.Start();
+            RedCarRight1.Visible = true;
+
+            timer11.Start();
+            Pricepa1.Visible = true;
+
+            timer12.Start();
+            BlueCarRight1.Visible = true;
+        }
+
+        private void End_Click(object sender, EventArgs e)
+        {
+            ResetCars();
+        }
+
+        private void Pause_Click(object sender, EventArgs e)
+        {
+            isPaused = !isPaused;
+            if (isPaused)
+            {
+                timer1.Stop();
+                timer2.Stop();
+                timer3.Stop();
+                timer4.Stop();
+                timer5.Stop();
+                timer6.Stop();
+                timer7.Stop();
+                timer8.Stop();
+                timer9.Stop();
+                timer10.Stop();
+                timer11.Stop();
+                timer12.Stop();
+                Pause.Text = "Продолжить";
+            }
+            else
+            {
+                timer1.Start();
+                timer2.Start();
+                timer3.Start();
+                timer4.Start();
+                timer5.Start();
+                timer6.Start();
+                timer7.Start();
+                timer8.Start();
+                timer9.Start();
+                timer10.Start();
+                timer11.Start();
+                timer12.Start();
+                Pause.Text = "Пауза";
+            }
+
+            
         }
     }
 }
